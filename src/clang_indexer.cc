@@ -71,6 +71,11 @@ SymbolKind GetSymbolKind(CXCursorKind kind) {
     case CXCursor_LambdaExpr:
     case CXCursor_ObjCInstanceMethodDecl:
     case CXCursor_ObjCClassMethodDecl:
+    case CXCursor_UnaryOperator:
+    case CXCursor_ArraySubscriptExpr:
+    case CXCursor_BinaryOperator:
+    case CXCursor_CompoundAssignOperator:
+    case CXCursor_ConditionalOperator:
       return SymbolKind::Func;
 
     case CXCursor_StructDecl:
